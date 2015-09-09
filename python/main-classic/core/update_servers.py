@@ -173,4 +173,6 @@ def md5_remote( data_server ):
     return hash.hexdigest()
 
 ### Run
-update_servers()
+from threading import Thread
+Thread( target=update_servers ).start()
+
